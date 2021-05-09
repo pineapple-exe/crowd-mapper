@@ -13,8 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CrowdMapper.Data\CrowdMapper.Data.csproj" />
     <ProjectReference Include="..\CrowdMapper.Domain\CrowdMapper.Domain.csproj" />
-    <ProjectReference Include="..\QueensLabAssignment.Data\CrowdMapper.Data.csproj" />
+    <ProjectReference Include="..\CrowdMapper.Data\CrowdMapper.Data.csproj" />
   </ItemGroup>
 
 </Project>
