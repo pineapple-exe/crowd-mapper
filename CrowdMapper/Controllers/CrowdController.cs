@@ -16,7 +16,7 @@ namespace CrowdMapper.Controllers
             _crowdMapperDomain = crowdMapperDomain;
         }
 
-        [HttpPost("enter")]
+        [HttpPost("{zone}/enter")]
         public IActionResult Enter(string zone, DateTime timestamp)
         {
             _crowdMapperDomain.Enter(zone, timestamp);
@@ -24,7 +24,7 @@ namespace CrowdMapper.Controllers
             return Ok();
         }
 
-        [HttpGet("exit")]
+        [HttpPost("{zone}/exit")]
         public IActionResult Exit(string zone, DateTime timestamp)
         {
             _crowdMapperDomain.Exit(zone, timestamp);
@@ -32,7 +32,7 @@ namespace CrowdMapper.Controllers
             return Ok();
         }
 
-        [HttpGet("list")]
+        [HttpGet()]
         public List<ZoneOutputModel> List()
         {
             return _crowdMapperDomain.List();
